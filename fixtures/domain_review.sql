@@ -1,0 +1,6 @@
+INSERT INTO domain_review_cases VALUES
+  ('baseline', 'trust boundary', 68, 24, 10, 68, 198, 'ship'),
+  ('stress', 'claim drift', 56, 46, 29, 88, 159, 'ship'),
+  ('edge', 'replay exposure', 73, 47, 18, 80, 219, 'ship'),
+  ('recovery', 'policy width', 57, 28, 26, 91, 155, 'ship'),
+  ('stale', 'trust boundary', 83, 24, 17, 81, 220, 'ship');

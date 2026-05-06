@@ -1,0 +1,73 @@
+{
+  "repo": "sqlguard",
+  "language": "SQL",
+  "category": "Security tooling",
+  "goal": "Detect unsafe query construction and verify parameterized alternatives.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 68,
+      "slack": 24,
+      "drag": 10,
+      "confidence": 68,
+      "score": 198,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 56,
+      "slack": 46,
+      "drag": 29,
+      "confidence": 88,
+      "score": 159,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 73,
+      "slack": 47,
+      "drag": 18,
+      "confidence": 80,
+      "score": 219,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 57,
+      "slack": 28,
+      "drag": 26,
+      "confidence": 91,
+      "score": 155,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 83,
+      "slack": 24,
+      "drag": 17,
+      "confidence": 81,
+      "score": 220,
+      "lane": "ship"
+    }
+  ]
+}

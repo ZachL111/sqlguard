@@ -1,0 +1,29 @@
+{
+  "repo": "sqlguard",
+  "language": "SQL",
+  "category": "Security tooling",
+  "case_count": 5,
+  "score_formula": "signal * 2 + slack + confidence - drag * 3",
+  "lane_thresholds": {
+    "ship": 140,
+    "watch": 105
+  },
+  "read_order": [
+    "README.md",
+    "fixtures/domain_review.csv",
+    "metadata/domain-review.json",
+    "examples/sqlguard-walkthrough.md"
+  ],
+  "first_question": "Does trust boundary still dominate the review result?",
+  "second_question": "Is replay exposure being penalized hard enough before policy width is trusted?",
+  "highest_case": {
+    "name": "stale",
+    "focus": "trust boundary",
+    "score": 220
+  },
+  "lowest_case": {
+    "name": "recovery",
+    "focus": "policy width",
+    "score": 155
+  }
+}
