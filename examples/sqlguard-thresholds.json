@@ -1,0 +1,17 @@
+{
+  "repo": "sqlguard",
+  "thresholds": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 153,
+    "watch": 127
+  },
+  "terms": [
+    "trust boundary",
+    "claim drift",
+    "replay exposure",
+    "policy width"
+  ]
+}
